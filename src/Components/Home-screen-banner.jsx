@@ -1,6 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const HomeScreenBanner = () =>{
+
+    const navigate = useNavigate()
+
     return(
             <div className='container'>
                 <div className='row mt-3' style={{"backgroundColor":"#D4E7FE"}}>
@@ -25,7 +29,7 @@ const HomeScreenBanner = () =>{
                                 <input type="text" className='form-control py-2' placeholder='Search your next read'/>
                             </div>
                             <div className='col-lg-2 col-3'>
-                                <button className='form-control py-2' style={{"backgroundColor":"#945AE0","color":"white    "}}>Go</button>
+                                <button className='form-control py-2' style={{"backgroundColor":"#945AE0","color":"white"}} onClick={()=>navigate('/search-results')}>Go</button>
                             </div>
                         </div>
                     </div>

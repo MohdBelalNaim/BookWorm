@@ -4,9 +4,10 @@ import BookCard from '../Components/Book-card';
 import HomeScreenBanner from '../Components/Home-screen-banner'
 
 const HomeScreen = () =>{
+
     return(
-        <div>
-            <HomeScreenBanner />
+        <div className='animate__animated animate__fadeIn'>
+            <HomeScreenBanner/>
             <div>
                 <div className='container mt-4 h5'> <b>Top reads</b></div>
                 <div className='container'>
