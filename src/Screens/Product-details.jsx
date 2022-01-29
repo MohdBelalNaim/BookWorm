@@ -1,6 +1,22 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { showLogin } from '../Redux/actions';
 
 const ProductDetails = () =>{
+
+    const auth = useSelector(state=>state.auth)
+    const dispatch = useDispatch()
+
+    function addToCart(){
+        if(!auth){
+            dispatch(showLogin())
+        }
+        else{
+            alert("Adding beba")
+        }
+    }
+
     return(
         <div className='container animate__animated animate__fadeIn'>
             <div className='row'>
@@ -34,7 +50,7 @@ const ProductDetails = () =>{
                         <span className='h4'>₹220</span> <span style={{"fontSize":16+"px"}} className='px-2'>(Taxes included)</span>
                     </div>
                     <div className='mt-4'>
-                        <button className='btn border py-2' style={{"backgroundColor":"#CF4ABF","color":"white"}}>Add to cart <i className='fas fa-plus px-1'></i></button>
+                        <button onClick={()=>addToCart()} className='btn border py-2' style={{"backgroundColor":"#CF4ABF","color":"white"}}>Add to cart <i className='fas fa-plus px-1'></i></button>
                     </div>
 
                     <div className='mt-5 h5'>

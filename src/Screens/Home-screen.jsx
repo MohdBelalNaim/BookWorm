@@ -5,8 +5,7 @@ import BookCard from '../Components/Book-card';
 import HomeScreenBanner from '../Components/Home-screen-banner'
 
 const HomeScreen = () =>{
-
-    return(
+        return(
         <div className='animate__animated animate__fadeIn'>
             <HomeScreenBanner/>
             <div>

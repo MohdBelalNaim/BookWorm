@@ -11,7 +11,7 @@ const BookCard = () =>{
             </div>
             <div className='mt-3'><b>The monk who sold his ferrari</b></div>
             <div className='mt-2'>By Robin Sharma</div>
-            <button className='form-control mt-3' style={{"backgroundColor":"#945AE0","color":"white"}}>Add to cart</button>
+            {/* <button className='form-control mt-3' style={{"backgroundColor":"#945AE0","color":"white"}}>Add to cart</button> */}
         </div>
             </Link>
         </div>
